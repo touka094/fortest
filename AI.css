@@ -1,0 +1,344 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+  }
+  
+  .board-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 20px;
+  }
+  
+  .board {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid black;
+    padding: 10px;
+  }
+  
+  .row {
+    display: flex;
+  }
+  
+  .square {
+    width: 100px;
+    height: 100px;
+    border: 2px solid black;
+    margin: 0;
+    text-align: center;
+    font-size: 48px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .square:hover {
+    background-color: #ddd;
+  }
+  
+  .square-left, .square-right {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 250px;
+    height: 300px;
+    border: 2px solid black;
+    margin: 0 200px;
+  }
+  
+  .message {
+    font-size: 24px;
+    margin-top: 20px;
+    margin-bottom: 5px;
+    text-align: center;
+  }
+  
+  .attackButt{
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 20px;
+  }
+  
+  .attackButt:disabled {
+    background-color: #C0C0C0;
+    cursor: default;
+  }
+
+  .skillButt {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 20px;
+  }
+  .skillButt:disabled {
+    background-color: #C0C0C0;
+    cursor: default;
+  }
+
+  .ResetButt {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: none;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 20px;
+  }
+
+  .ResetButt:disabled {
+    background-color: #C0C0C0;
+    cursor: default;
+  }
+
+  body {
+    margin: 0;
+    padding: 0;
+    background-color: #AAD6F3;
+    overflow: hidden;
+  }
+  
+  
+.characterSelection h1 {
+  margin-top: 0;
+}
+  .characterSelection {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+  }
+  
+  .character-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 500px;
+    height: 200px;
+  }
+  
+  .character {
+    width: 200px;
+    height: 200px;
+  }
+  .character img {
+    max-width: 100%;
+    max-height: 100%;
+  }
+  
+  #character1 {
+    /* background-color: red; */
+  }
+  
+  #character2 {
+    /* background-color: blue; */
+  }
+
+  .selectChar {
+    display: inline-block;
+    margin-top: 25%;
+    font-size: 25px;
+    color: white;
+    cursor: pointer;
+    padding: 10px 10px;
+    position: relative;
+    background: blue;
+    width: auto;
+    z-index: 2;
+  }
+
+  .selectChar:active {
+    top: 3%;
+  }
+  
+  .selectChar::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 6px;
+    bottom: 6px;
+    left: -8px;
+    right: -8px;
+    background: blue;
+    z-index: -1;
+  }
+  
+  .selectChar:hover {
+    /* background-color: black;
+    color: white; */
+  }
+  .selectChar:disabled {
+    /* background-color: gray;
+    color: #ccc; */
+    cursor: not-allowed;
+  }
+  
+  
+
+
+  
+
+  
+
+
+
+
+  .square-left img {
+    max-width: 100%;
+    max-height: 100%;
+  }
+  
+  .square-left .playerHP {
+    height: 50%;
+    width: 100%;
+    background-color: gray;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+  }
+
+  .square-right img {
+    max-width: 100%;
+    max-height: 100%;
+  }
+
+  .square-right .botHP {
+    height: 50%;
+    width: 100%;
+    background-color: gray;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+  }
+
+  .character.selected {
+    background-color: rgba(128, 128, 128, 0.467);
+    border-radius: 15px;
+  }
+
+  .selectk , .selectw {
+    transition: transform .5s;
+  }
+
+  .selectk:hover, .selectw:hover {
+    transform: scale(1.1);
+  }
+
+  .prop {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    pointer-events: none;
+  }
+
+  .propforgreen {
+    position: absolute;
+    width: 100vw;
+    height: 3vh;
+    margin-top: 90vh;
+    background-color: #5DBD39;
+    pointer-events: none;
+  }
+
+  .propforbrown {
+    position: absolute;
+    width: 100vw;
+    height: 7vh;
+    margin-top: 93vh;
+    background-color: #6E421A;
+    pointer-events: none;
+  }
+  
+  .cl1 {
+    position: absolute;
+    width: 10vw;
+    top: 15%;
+    left: 30%;
+    pointer-events: none;
+  }
+
+  .cl2 {
+    position: absolute;
+    max-width: 140px;
+    max-height: 140px;
+    top: 30%;
+    right: 10%;
+    pointer-events: none;
+  }
+
+  .cl3 {
+    position: absolute;
+    max-width: 150px;
+    max-height: 150px;
+    top: 50%;
+    left: 20%;
+    pointer-events: none;
+    transform: scaleX(-1);
+    /* background-color: #4CAF50; */
+  }
+
+  .propt1 {
+    position: relative;
+    width: 130px;
+    bottom: 17vh;
+    z-index: 1;
+  }
+
+  .propt2 {
+    position: relative;
+    width: 120px;
+    bottom: 15vh;
+    z-index: 1;
+    left: 40vw;
+  }
+
+  .propt3 {
+    position: relative;
+    width: 150px;
+    bottom: 15vh;
+    z-index: 1;
+    left: 70vw;
+    /* background-color: rebeccapurple; */
+  }
+
+  @media only screen and (max-width: 750px) {
+    .cl1 {
+      width: 20vw;
+      top: 15%;
+      left: 5%;
+    }
+    .cl2 {
+      width: 20vw;
+      top: 10%;
+    }
+    .cl3 {
+      width: 20vw;
+      top: 30%;
+      left: 30%;
+    }
+  }
