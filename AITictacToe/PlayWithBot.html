@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Tic Tac Toe</title>
+    <link rel="stylesheet" href="AI.css">
+  </head>
+  <body>
+
+    
+
+    <div class="prop">
+      <div class="propc">
+      <img class="cl1" src="Pic/Cloud.gif" alt="">
+      <img class="cl2" src="Pic/Cloud.gif" alt="">
+      <img class="cl3" src="Pic/Cloud.gif" alt="">
+    </div>
+      <div class="propforgreen">
+
+
+          <img class="propt1" src="Pic/tree.gif" alt="">
+          <img class="propt2" src="Pic/tree.gif" alt="">
+          <img class="propt3" src="Pic/tree.gif" alt="">
+
+
+      </div>
+      
+      <div class="propforbrown"></div>
+    </div>
+
+    <div class="characterSelection" style="display: flex;">
+      <h1>Select Your Character</h1>
+      <div class="character-container">
+        <div id="character1" class="character">
+          <img class="selectk" src="Pic/knight.gif" alt="">
+        </div>
+        <div style="width: 50px;"></div>
+        <div id="character2" class="character">
+          <img class="selectw" src="Pic/Wizard.gif" alt="">
+        </div>
+      </div>
+      <div id="button-container">
+        <button class="selectChar" disabled>Select</button>
+        <!-- <button class="pixel2" disabled>Select Pixel</button> -->
+      </div>
+    </div>
+
+
+
+    <div class="container gamePage" style="display: none;">
+      <div class="board-wrapper">
+        <div class="square-left">
+          <img id="playerChar" src="pic/Bot.gif" alt="">
+          <div class="playerHP">HP:3</div>
+        </div>
+        <div class="board">
+          <div class="row">
+            <div class="square"></div>
+            <div class="square"></div>
+            <div class="square"></div>
+          </div>
+          <div class="row">
+            <div class="square"></div>
+            <div class="square"></div>
+            <div class="square"></div>
+          </div>
+          <div class="row">
+            <div class="square"></div>
+            <div class="square"></div>
+            <div class="square"></div>
+          </div>
+        </div>
+        <div class="square-right">
+          <img src="pic/Bot.gif" alt="">
+          <div class="botHP">HP:3</div>
+        </div>
+       
+      </div>
+      <div class="bottom-section">
+        <div class="message">X's turn</div>
+        <button class="button attackButt" id="attackButt" disabled>Attack</button>
+        <button class="button skillButt" id="skillButt" disabled>Skill</button>
+        <button class="button ResetButt" id="ResetButt" disabled>Reset</button>
+      </div>
+    </div>
+    <script src="BotAI.js"></script>
+  </body>
+</html>
